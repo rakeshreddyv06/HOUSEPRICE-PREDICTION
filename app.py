@@ -1,9 +1,10 @@
 import streamlit as st
-import pickle
 import numpy as np
+import pickle
 
-# Load model
-model = pickle.load(open("price_model.pkl", "rb"))
+with open("price_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
 
 st.set_page_config(page_title="Price Prediction App")
 
